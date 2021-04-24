@@ -56,8 +56,14 @@ function setup() {
 function draw() {
 	Engine.update(engine)
 
+	//text
+	text("Press down arrow key to release the package", width/2, height/5);
+	
+	/*pckage sprite's position = package body's position. This way, sprite will follow the body and the body will perform its properties simultaneously. This will create
+	and illusion of the package falling due to gravity.*/
 	package.x = packageBody.position.x;
 	package.y = packageBody.position.y;
+	//drop the package.
 	drop();
 
 	drawSprites();
